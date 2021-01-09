@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol WelcomeRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func navigateToProductManagement()
 }
 
 protocol WelcomeDataPassing {
@@ -24,31 +24,18 @@ class WelcomeRouter: NSObject, WelcomeRoutingLogic, WelcomeDataPassing {
     weak var viewController: WelcomeViewController?
     var dataStore: WelcomeDataStore?
     
-//    // MARK: Routing
-//    
-//    func routeToSomewhere(segue: UIStoryboardSegue?) {
-//        if let segue = segue {
-//            let destinationVC = segue.destination as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//        } else {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//            navigateToSomewhere(source: viewController!, destination: destinationVC)
-//        }
-//    }
-//    
-//    //     MARK: Navigation
-//    
-//    func navigateToSomewhere(source: WelcomeViewController, destination: SomewhereViewController) {
-//        source.show(destination, sender: nil)
-//    }
-//    
-//    //     MARK: Passing data
-//    
-//    func passDataToSomewhere(source: WelcomeDataStore, destination: inout SomewhereDataStore) {
-//        destination.name = source.name
-//    }
+    func navigateToProductManagement() {
+        guard let navigationController = UIStoryboard(name: "ProductManagement", bundle: nil).instantiateInitialViewController() as? UINavigationController, let productSelectionViewController = navigationController.viewControllers.first as? ProductSelectionViewController else {
+            return
+        }
+        
+        var productSelectionViewControllerDS = productSelectionViewController.router!.dataStore!
+        passDataToProductSelection(source: dataStore!, destination: &productSelectionViewControllerDS)
+        UIApplication.shared.windows.first?.rootViewController = productSelectionViewController
+    }
+    
+    private func passDataToProductSelection(source: WelcomeDataStore, destination: inout ProductSelectionDataStore) {
+        destination.rates = source.rates
+        destination.transactions = source.transactions
+    }
 }

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Product Selection View Controller-->
         <scene sceneID="mkq-Nj-Ue3">
             <objects>
-                <viewController id="hvw-xl-H4f" sceneMemberID="viewController">
+                <viewController id="hvw-xl-H4f" customClass="ProductSelectionViewController" customModule="BemobileGNB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jC3-Wg-GFZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

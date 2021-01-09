@@ -16,8 +16,12 @@ protocol ProductSelectionBusinessLogic {
 }
 
 protocol ProductSelectionDataStore {
+    var rates: [RateModel] { get set }
+    var transactions: [TransactionModel] { get set }
 }
 
 class ProductSelectionInteractor: ProductSelectionBusinessLogic, ProductSelectionDataStore {
+    var rates = [RateModel]()
+    var transactions = [TransactionModel]()
     var presenter: ProductSelectionPresentationLogic?
 }

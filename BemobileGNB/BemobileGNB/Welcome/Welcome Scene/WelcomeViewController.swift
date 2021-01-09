@@ -90,6 +90,6 @@ extension WelcomeViewController: WelcomeDisplayLogic {
     
     func requirementsCompleted() {
         loadingHUD.stopAnimating()
-        print("jobs done")
+        router?.navigateToProductManagement()
     }
 }
