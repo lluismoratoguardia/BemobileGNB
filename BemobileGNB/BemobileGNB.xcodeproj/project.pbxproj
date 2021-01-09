@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		849ABBD425A9E5A200C37592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABBD325A9E5A200C37592 /* AppDelegate.swift */; };
+		849ABBD625A9E5A200C37592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABBD525A9E5A200C37592 /* SceneDelegate.swift */; };
+		849ABBD825A9E5A200C37592 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABBD725A9E5A200C37592 /* ViewController.swift */; };
+		849ABBDB25A9E5A200C37592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849ABBD925A9E5A200C37592 /* Main.storyboard */; };
+		849ABBDD25A9E5A400C37592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849ABBDC25A9E5A400C37592 /* Assets.xcassets */; };
+		849ABBE025A9E5A400C37592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849ABBDE25A9E5A400C37592 /* LaunchScreen.storyboard */; };
+		849ABBEB25A9E5A400C37592 /* BemobileGNBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABBEA25A9E5A400C37592 /* BemobileGNBTests.swift */; };
+		849ABBF625A9E5A400C37592 /* BemobileGNBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABBF525A9E5A400C37592 /* BemobileGNBUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		849ABBE725A9E5A400C37592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849ABBC825A9E5A200C37592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 849ABBCF25A9E5A200C37592;
+			remoteInfo = BemobileGNB;
+		};
+		849ABBF225A9E5A400C37592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849ABBC825A9E5A200C37592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 849ABBCF25A9E5A200C37592;
+			remoteInfo = BemobileGNB;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		849ABBD025A9E5A200C37592 /* BemobileGNB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BemobileGNB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		849ABBD325A9E5A200C37592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		849ABBD525A9E5A200C37592 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		849ABBD725A9E5A200C37592 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		849ABBDA25A9E5A200C37592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		849ABBDC25A9E5A400C37592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		849ABBDF25A9E5A400C37592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		849ABBE125A9E5A400C37592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849ABBE625A9E5A400C37592 /* BemobileGNBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BemobileGNBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		849ABBEA25A9E5A400C37592 /* BemobileGNBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BemobileGNBTests.swift; sourceTree = "<group>"; };
+		849ABBEC25A9E5A400C37592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849ABBF125A9E5A400C37592 /* BemobileGNBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BemobileGNBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		849ABBF525A9E5A400C37592 /* BemobileGNBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BemobileGNBUITests.swift; sourceTree = "<group>"; };
+		849ABBF725A9E5A400C37592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		849ABBCD25A9E5A200C37592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849ABBE325A9E5A400C37592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849ABBEE25A9E5A400C37592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		849ABBC725A9E5A200C37592 = {
+			isa = PBXGroup;
+			children = (
+				849ABBD225A9E5A200C37592 /* BemobileGNB */,
+				849ABBE925A9E5A400C37592 /* BemobileGNBTests */,
+				849ABBF425A9E5A400C37592 /* BemobileGNBUITests */,
+				849ABBD125A9E5A200C37592 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		849ABBD125A9E5A200C37592 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				849ABBD025A9E5A200C37592 /* BemobileGNB.app */,
+				849ABBE625A9E5A400C37592 /* BemobileGNBTests.xctest */,
+				849ABBF125A9E5A400C37592 /* BemobileGNBUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		849ABBD225A9E5A200C37592 /* BemobileGNB */ = {
+			isa = PBXGroup;
+			children = (
+				849ABBD325A9E5A200C37592 /* AppDelegate.swift */,
+				849ABBD525A9E5A200C37592 /* SceneDelegate.swift */,
+				849ABBD725A9E5A200C37592 /* ViewController.swift */,
+				849ABBD925A9E5A200C37592 /* Main.storyboard */,
+				849ABBDC25A9E5A400C37592 /* Assets.xcassets */,
+				849ABBDE25A9E5A400C37592 /* LaunchScreen.storyboard */,
+				849ABBE125A9E5A400C37592 /* Info.plist */,
+			);
+			path = BemobileGNB;
+			sourceTree = "<group>";
+		};
+		849ABBE925A9E5A400C37592 /* BemobileGNBTests */ = {
+			isa = PBXGroup;
+			children = (
+				849ABBEA25A9E5A400C37592 /* BemobileGNBTests.swift */,
+				849ABBEC25A9E5A400C37592 /* Info.plist */,
+			);
+			path = BemobileGNBTests;
+			sourceTree = "<group>";
+		};
+		849ABBF425A9E5A400C37592 /* BemobileGNBUITests */ = {
+			isa = PBXGroup;
+			children = (
+				849ABBF525A9E5A400C37592 /* BemobileGNBUITests.swift */,
+				849ABBF725A9E5A400C37592 /* Info.plist */,
+			);
+			path = BemobileGNBUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		849ABBCF25A9E5A200C37592 /* BemobileGNB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849ABBFA25A9E5A400C37592 /* Build configuration list for PBXNativeTarget "BemobileGNB" */;
+			buildPhases = (
+				849ABBCC25A9E5A200C37592 /* Sources */,
+				849ABBCD25A9E5A200C37592 /* Frameworks */,
+				849ABBCE25A9E5A200C37592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BemobileGNB;
+			productName = BemobileGNB;
+			productReference = 849ABBD025A9E5A200C37592 /* BemobileGNB.app */;
+			productType = "com.apple.product-type.application";
+		};
+		849ABBE525A9E5A400C37592 /* BemobileGNBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849ABBFD25A9E5A400C37592 /* Build configuration list for PBXNativeTarget "BemobileGNBTests" */;
+			buildPhases = (
+				849ABBE225A9E5A400C37592 /* Sources */,
+				849ABBE325A9E5A400C37592 /* Frameworks */,
+				849ABBE425A9E5A400C37592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				849ABBE825A9E5A400C37592 /* PBXTargetDependency */,
+			);
+			name = BemobileGNBTests;
+			productName = BemobileGNBTests;
+			productReference = 849ABBE625A9E5A400C37592 /* BemobileGNBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		849ABBF025A9E5A400C37592 /* BemobileGNBUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849ABC0025A9E5A400C37592 /* Build configuration list for PBXNativeTarget "BemobileGNBUITests" */;
+			buildPhases = (
+				849ABBED25A9E5A400C37592 /* Sources */,
+				849ABBEE25A9E5A400C37592 /* Frameworks */,
+				849ABBEF25A9E5A400C37592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				849ABBF325A9E5A400C37592 /* PBXTargetDependency */,
+			);
+			name = BemobileGNBUITests;
+			productName = BemobileGNBUITests;
+			productReference = 849ABBF125A9E5A400C37592 /* BemobileGNBUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		849ABBC825A9E5A200C37592 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					849ABBCF25A9E5A200C37592 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					849ABBE525A9E5A400C37592 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 849ABBCF25A9E5A200C37592;
+					};
+					849ABBF025A9E5A400C37592 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 849ABBCF25A9E5A200C37592;
+					};
+				};
+			};
+			buildConfigurationList = 849ABBCB25A9E5A200C37592 /* Build configuration list for PBXProject "BemobileGNB" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 849ABBC725A9E5A200C37592;
+			productRefGroup = 849ABBD125A9E5A200C37592 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				849ABBCF25A9E5A200C37592 /* BemobileGNB */,
+				849ABBE525A9E5A400C37592 /* BemobileGNBTests */,
+				849ABBF025A9E5A400C37592 /* BemobileGNBUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		849ABBCE25A9E5A200C37592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849ABBE025A9E5A400C37592 /* LaunchScreen.storyboard in Resources */,
+				849ABBDD25A9E5A400C37592 /* Assets.xcassets in Resources */,
+				849ABBDB25A9E5A200C37592 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849ABBE425A9E5A400C37592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849ABBEF25A9E5A400C37592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		849ABBCC25A9E5A200C37592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849ABBD825A9E5A200C37592 /* ViewController.swift in Sources */,
+				849ABBD425A9E5A200C37592 /* AppDelegate.swift in Sources */,
+				849ABBD625A9E5A200C37592 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849ABBE225A9E5A400C37592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849ABBEB25A9E5A400C37592 /* BemobileGNBTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849ABBED25A9E5A400C37592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849ABBF625A9E5A400C37592 /* BemobileGNBUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		849ABBE825A9E5A400C37592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 849ABBCF25A9E5A200C37592 /* BemobileGNB */;
+			targetProxy = 849ABBE725A9E5A400C37592 /* PBXContainerItemProxy */;
+		};
+		849ABBF325A9E5A400C37592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 849ABBCF25A9E5A200C37592 /* BemobileGNB */;
+			targetProxy = 849ABBF225A9E5A400C37592 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		849ABBD925A9E5A200C37592 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849ABBDA25A9E5A200C37592 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		849ABBDE25A9E5A400C37592 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849ABBDF25A9E5A400C37592 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		849ABBF825A9E5A400C37592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		849ABBF925A9E5A400C37592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		849ABBFB25A9E5A400C37592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UY58GY628;
+				INFOPLIST_FILE = BemobileGNB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lluismoratoguardia.BemobileGNB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		849ABBFC25A9E5A400C37592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UY58GY628;
+				INFOPLIST_FILE = BemobileGNB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lluismoratoguardia.BemobileGNB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		849ABBFE25A9E5A400C37592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UY58GY628;
+				INFOPLIST_FILE = BemobileGNBTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lluismoratoguardia.BemobileGNBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BemobileGNB.app/BemobileGNB";
+			};
+			name = Debug;
+		};
+		849ABBFF25A9E5A400C37592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UY58GY628;
+				INFOPLIST_FILE = BemobileGNBTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lluismoratoguardia.BemobileGNBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BemobileGNB.app/BemobileGNB";
+			};
+			name = Release;
+		};
+		849ABC0125A9E5A400C37592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UY58GY628;
+				INFOPLIST_FILE = BemobileGNBUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lluismoratoguardia.BemobileGNBUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BemobileGNB;
+			};
+			name = Debug;
+		};
+		849ABC0225A9E5A400C37592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UY58GY628;
+				INFOPLIST_FILE = BemobileGNBUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lluismoratoguardia.BemobileGNBUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BemobileGNB;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		849ABBCB25A9E5A200C37592 /* Build configuration list for PBXProject "BemobileGNB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849ABBF825A9E5A400C37592 /* Debug */,
+				849ABBF925A9E5A400C37592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849ABBFA25A9E5A400C37592 /* Build configuration list for PBXNativeTarget "BemobileGNB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849ABBFB25A9E5A400C37592 /* Debug */,
+				849ABBFC25A9E5A400C37592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849ABBFD25A9E5A400C37592 /* Build configuration list for PBXNativeTarget "BemobileGNBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849ABBFE25A9E5A400C37592 /* Debug */,
+				849ABBFF25A9E5A400C37592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849ABC0025A9E5A400C37592 /* Build configuration list for PBXNativeTarget "BemobileGNBUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849ABC0125A9E5A400C37592 /* Debug */,
+				849ABC0225A9E5A400C37592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 849ABBC825A9E5A200C37592 /* Project object */;
+}
