@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  BemobileGNB
+
+  Created by Admin on 09/01/2021.
+  
+*/
+
+"welcome_title" = "Welcome to Goliath National Bank";
+"welcome_subtitle" = "Please, wait while required data loads";
