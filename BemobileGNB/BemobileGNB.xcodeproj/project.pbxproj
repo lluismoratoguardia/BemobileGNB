@@ -19,6 +19,8 @@
 		849ABC2525A9E7F300C37592 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC2125A9E7F300C37592 /* WelcomeViewController.swift */; };
 		849ABC2625A9E7F300C37592 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC2225A9E7F300C37592 /* WelcomeInteractor.swift */; };
 		849ABC3225A9E8AF00C37592 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 849ABC3425A9E8AF00C37592 /* Localizable.strings */; };
+		849ABC4025A9E98200C37592 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC3F25A9E98200C37592 /* UILabelExtension.swift */; };
+		849ABC4825A9EA4500C37592 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC4725A9EA4500C37592 /* StringExtension.swift */; };
 		849ABC5325A9ECCB00C37592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC5225A9ECCB00C37592 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		849ABC3325A9E8AF00C37592 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		849ABC3925A9E91B00C37592 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		849ABC3A25A9E91B00C37592 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		849ABC3F25A9E98200C37592 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		849ABC4725A9EA4500C37592 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		849ABC5225A9ECCB00C37592 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				849ABC5225A9ECCB00C37592 /* SceneDelegate.swift */,
+				849ABC3E25A9E96E00C37592 /* Extensions */,
 				849ABC1825A9E7C100C37592 /* Welcome */,
 				849ABBD325A9E5A200C37592 /* AppDelegate.swift */,
 				849ABBD725A9E5A200C37592 /* ViewController.swift */,
@@ -159,6 +164,15 @@
 				849ABC2225A9E7F300C37592 /* WelcomeInteractor.swift */,
 			);
 			path = "Welcome Scene";
+			sourceTree = "<group>";
+		};
+		849ABC3E25A9E96E00C37592 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				849ABC3F25A9E98200C37592 /* UILabelExtension.swift */,
+				849ABC4725A9EA4500C37592 /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,10 +310,12 @@
 				849ABC2425A9E7F300C37592 /* WelcomeRouter.swift in Sources */,
 				849ABC2525A9E7F300C37592 /* WelcomeViewController.swift in Sources */,
 				849ABC2625A9E7F300C37592 /* WelcomeInteractor.swift in Sources */,
+				849ABC4025A9E98200C37592 /* UILabelExtension.swift in Sources */,
 				849ABBD825A9E5A200C37592 /* ViewController.swift in Sources */,
 				849ABC5325A9ECCB00C37592 /* SceneDelegate.swift in Sources */,
 				849ABBD425A9E5A200C37592 /* AppDelegate.swift in Sources */,
 				849ABC2325A9E7F300C37592 /* WelcomePresenter.swift in Sources */,
+				849ABC4825A9EA4500C37592 /* StringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
