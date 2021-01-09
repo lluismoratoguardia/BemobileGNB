@@ -13,6 +13,11 @@
 		849ABBE025A9E5A400C37592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849ABBDE25A9E5A400C37592 /* LaunchScreen.storyboard */; };
 		849ABBEB25A9E5A400C37592 /* BemobileGNBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABBEA25A9E5A400C37592 /* BemobileGNBTests.swift */; };
 		849ABBF625A9E5A400C37592 /* BemobileGNBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABBF525A9E5A400C37592 /* BemobileGNBUITests.swift */; };
+		849ABC0B25A9E70500C37592 /* ProductSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC0725A9E70500C37592 /* ProductSelectionPresenter.swift */; };
+		849ABC0C25A9E70500C37592 /* ProductSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC0825A9E70500C37592 /* ProductSelectionRouter.swift */; };
+		849ABC0D25A9E70500C37592 /* ProductSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC0925A9E70500C37592 /* ProductSelectionViewController.swift */; };
+		849ABC0E25A9E70500C37592 /* ProductSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC0A25A9E70500C37592 /* ProductSelectionInteractor.swift */; };
+		849ABC1425A9E73500C37592 /* ProductManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849ABC1325A9E73500C37592 /* ProductManagement.storyboard */; };
 		849ABC1A25A9E7D500C37592 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849ABC1925A9E7D500C37592 /* Welcome.storyboard */; };
 		849ABC2325A9E7F300C37592 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC1F25A9E7F300C37592 /* WelcomePresenter.swift */; };
 		849ABC2425A9E7F300C37592 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC2025A9E7F300C37592 /* WelcomeRouter.swift */; };
@@ -60,6 +65,11 @@
 		849ABBF125A9E5A400C37592 /* BemobileGNBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BemobileGNBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849ABBF525A9E5A400C37592 /* BemobileGNBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BemobileGNBUITests.swift; sourceTree = "<group>"; };
 		849ABBF725A9E5A400C37592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849ABC0725A9E70500C37592 /* ProductSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionPresenter.swift; sourceTree = "<group>"; };
+		849ABC0825A9E70500C37592 /* ProductSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionRouter.swift; sourceTree = "<group>"; };
+		849ABC0925A9E70500C37592 /* ProductSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionViewController.swift; sourceTree = "<group>"; };
+		849ABC0A25A9E70500C37592 /* ProductSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionInteractor.swift; sourceTree = "<group>"; };
+		849ABC1325A9E73500C37592 /* ProductManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductManagement.storyboard; sourceTree = "<group>"; };
 		849ABC1925A9E7D500C37592 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		849ABC1F25A9E7F300C37592 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		849ABC2025A9E7F300C37592 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
@@ -132,6 +142,7 @@
 				849ABC5225A9ECCB00C37592 /* SceneDelegate.swift */,
 				849ABC3E25A9E96E00C37592 /* Extensions */,
 				849ABC1825A9E7C100C37592 /* Welcome */,
+				849ABC1225A9E71300C37592 /* Product Management */,
 				849ABBD325A9E5A200C37592 /* AppDelegate.swift */,
 				849ABBD725A9E5A200C37592 /* ViewController.swift */,
 				849ABBDC25A9E5A400C37592 /* Assets.xcassets */,
@@ -159,6 +170,26 @@
 				849ABBF725A9E5A400C37592 /* Info.plist */,
 			);
 			path = BemobileGNBUITests;
+			sourceTree = "<group>";
+		};
+		849ABC0625A9E6D900C37592 /* Product Selection Scene */ = {
+			isa = PBXGroup;
+			children = (
+				849ABC0725A9E70500C37592 /* ProductSelectionPresenter.swift */,
+				849ABC0825A9E70500C37592 /* ProductSelectionRouter.swift */,
+				849ABC0925A9E70500C37592 /* ProductSelectionViewController.swift */,
+				849ABC0A25A9E70500C37592 /* ProductSelectionInteractor.swift */,
+			);
+			path = "Product Selection Scene";
+			sourceTree = "<group>";
+		};
+		849ABC1225A9E71300C37592 /* Product Management */ = {
+			isa = PBXGroup;
+			children = (
+				849ABC0625A9E6D900C37592 /* Product Selection Scene */,
+				849ABC1325A9E73500C37592 /* ProductManagement.storyboard */,
+			);
+			path = "Product Management";
 			sourceTree = "<group>";
 		};
 		849ABC1825A9E7C100C37592 /* Welcome */ = {
@@ -316,6 +347,7 @@
 				849ABC1A25A9E7D500C37592 /* Welcome.storyboard in Resources */,
 				849ABC3225A9E8AF00C37592 /* Localizable.strings in Resources */,
 				849ABBE025A9E5A400C37592 /* LaunchScreen.storyboard in Resources */,
+				849ABC1425A9E73500C37592 /* ProductManagement.storyboard in Resources */,
 				849ABBDD25A9E5A400C37592 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,13 +380,17 @@
 				849ABC6525A9FBB000C37592 /* APIClient.swift in Sources */,
 				849ABC5925A9F31E00C37592 /* AlertModels.swift in Sources */,
 				849ABC2625A9E7F300C37592 /* WelcomeInteractor.swift in Sources */,
+				849ABC0E25A9E70500C37592 /* ProductSelectionInteractor.swift in Sources */,
 				849ABC4025A9E98200C37592 /* UILabelExtension.swift in Sources */,
 				849ABBD825A9E5A200C37592 /* ViewController.swift in Sources */,
 				849ABC7F25AA0FB600C37592 /* TransactionModel.swift in Sources */,
+				849ABC0D25A9E70500C37592 /* ProductSelectionViewController.swift in Sources */,
+				849ABC0B25A9E70500C37592 /* ProductSelectionPresenter.swift in Sources */,
 				849ABC5325A9ECCB00C37592 /* SceneDelegate.swift in Sources */,
 				849ABBD425A9E5A200C37592 /* AppDelegate.swift in Sources */,
 				849ABC2325A9E7F300C37592 /* WelcomePresenter.swift in Sources */,
 				849ABC4825A9EA4500C37592 /* StringExtension.swift in Sources */,
+				849ABC0C25A9E70500C37592 /* ProductSelectionRouter.swift in Sources */,
 				849ABC6A25A9FECE00C37592 /* RateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
