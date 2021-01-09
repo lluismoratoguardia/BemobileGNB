@@ -23,9 +23,14 @@ final class APIClient {
         performRequest(urlRequest, completion: completion)
     }
     
+    class func requestTransactions(completion: @escaping(RequestResult<[TransactionModel]>) -> Void) {
+        let urlRequest = URLRequest(url:URL(string: Constants.API.baseURL + Constants.API.Endpoints.transactions)!)
+        performRequest(urlRequest, completion: completion)
+    }
+    
     private class func performRequest<T: Codable>(_ urlRequest: URLRequest, completion: @escaping(RequestResult<T>) -> Void) {
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-            if let error = error, (error as? NSError)?.code == NSURLErrorNotConnectedToInternet {
+            if let error = error, (error as NSError).code == NSURLErrorNotConnectedToInternet {
                 completion(.error(response: .network))
                 return
             }

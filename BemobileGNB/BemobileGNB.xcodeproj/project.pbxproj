@@ -24,6 +24,10 @@
 		849ABC5325A9ECCB00C37592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC5225A9ECCB00C37592 /* SceneDelegate.swift */; };
 		849ABC5925A9F31E00C37592 /* AlertModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC5825A9F31E00C37592 /* AlertModels.swift */; };
 		849ABC6025A9F3FE00C37592 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC5F25A9F3FE00C37592 /* AlertManager.swift */; };
+		849ABC6525A9FBB000C37592 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC6425A9FBB000C37592 /* APIClient.swift */; };
+		849ABC6A25A9FECE00C37592 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC6925A9FECE00C37592 /* RateModel.swift */; };
+		849ABC7425AA008100C37592 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC7325AA008100C37592 /* Constants.swift */; };
+		849ABC7F25AA0FB600C37592 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC7E25AA0FB600C37592 /* TransactionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		849ABC5225A9ECCB00C37592 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		849ABC5825A9F31E00C37592 /* AlertModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModels.swift; sourceTree = "<group>"; };
 		849ABC5F25A9F3FE00C37592 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		849ABC6425A9FBB000C37592 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		849ABC6925A9FECE00C37592 /* RateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
+		849ABC7325AA008100C37592 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		849ABC7E25AA0FB600C37592 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,7 @@
 				849ABBDE25A9E5A400C37592 /* LaunchScreen.storyboard */,
 				849ABBE125A9E5A400C37592 /* Info.plist */,
 				849ABC3425A9E8AF00C37592 /* Localizable.strings */,
+				849ABC7325AA008100C37592 /* Constants.swift */,
 			);
 			path = BemobileGNB;
 			sourceTree = "<group>";
@@ -185,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				849ABC5825A9F31E00C37592 /* AlertModels.swift */,
+				849ABC6925A9FECE00C37592 /* RateModel.swift */,
+				849ABC7E25AA0FB600C37592 /* TransactionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				849ABC5F25A9F3FE00C37592 /* AlertManager.swift */,
+				849ABC6425A9FBB000C37592 /* APIClient.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -330,16 +342,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				849ABC2425A9E7F300C37592 /* WelcomeRouter.swift in Sources */,
+				849ABC7425AA008100C37592 /* Constants.swift in Sources */,
 				849ABC2525A9E7F300C37592 /* WelcomeViewController.swift in Sources */,
 				849ABC6025A9F3FE00C37592 /* AlertManager.swift in Sources */,
+				849ABC6525A9FBB000C37592 /* APIClient.swift in Sources */,
 				849ABC5925A9F31E00C37592 /* AlertModels.swift in Sources */,
 				849ABC2625A9E7F300C37592 /* WelcomeInteractor.swift in Sources */,
 				849ABC4025A9E98200C37592 /* UILabelExtension.swift in Sources */,
 				849ABBD825A9E5A200C37592 /* ViewController.swift in Sources */,
+				849ABC7F25AA0FB600C37592 /* TransactionModel.swift in Sources */,
 				849ABC5325A9ECCB00C37592 /* SceneDelegate.swift in Sources */,
 				849ABBD425A9E5A200C37592 /* AppDelegate.swift in Sources */,
 				849ABC2325A9E7F300C37592 /* WelcomePresenter.swift in Sources */,
 				849ABC4825A9EA4500C37592 /* StringExtension.swift in Sources */,
+				849ABC6A25A9FECE00C37592 /* RateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

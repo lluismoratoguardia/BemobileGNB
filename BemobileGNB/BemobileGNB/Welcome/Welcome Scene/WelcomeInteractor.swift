@@ -17,15 +17,20 @@ protocol WelcomeBusinessLogic {
 }
 
 protocol WelcomeDataStore {
+    var rates: [RateModel] { get set }
+    var transactions: [TransactionModel] { get set }
 }
 
 class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
     var presenter: WelcomePresentationLogic?
     var rates = [RateModel]()
+    var transactions = [TransactionModel]()
     
     func requestData() {
         if rates.isEmpty {
             requestRates()
+        } else if transactions.isEmpty {
+            requestTransactions()
         } else {
             presenter?.dataReceived()
         }
@@ -36,6 +41,18 @@ class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
             switch response {
             case .success(let rates):
                 self.rates = rates
+                self.requestData()
+            case .error(let error):
+                self.presenter?.error(error)
+            }
+        }
+    }
+    
+    private func requestTransactions() {
+        APIClient.requestTransactions { (response) in
+            switch response {
+            case .success(let transactions):
+                self.transactions = transactions
                 self.requestData()
             case .error(let error):
                 self.presenter?.error(error)
