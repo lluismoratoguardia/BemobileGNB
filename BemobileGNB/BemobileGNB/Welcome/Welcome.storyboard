@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh6-pK-Iox">
-                                <rect key="frame" x="20" y="398.5" width="374" height="99"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wMi-RL-Dec">
+                                <rect key="frame" x="20" y="388.5" width="374" height="119"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef7-1J-acA">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
@@ -28,8 +28,11 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedString" value="welcome_title"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5Qy-Nm-TwS">
+                                        <rect key="frame" x="0.0" y="55" width="374" height="20"/>
+                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfA-Ui-XQV">
-                                        <rect key="frame" x="0.0" y="75" width="374" height="24"/>
+                                        <rect key="frame" x="0.0" y="95" width="374" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,26 +41,21 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="LfA-Ui-XQV" secondAttribute="trailing" id="Boy-AK-d9W"/>
-                                    <constraint firstItem="ef7-1J-acA" firstAttribute="leading" secondItem="Gh6-pK-Iox" secondAttribute="leading" id="BuR-rk-4gL"/>
-                                    <constraint firstAttribute="trailing" secondItem="ef7-1J-acA" secondAttribute="trailing" id="DMj-o0-DFr"/>
-                                    <constraint firstItem="LfA-Ui-XQV" firstAttribute="top" secondItem="ef7-1J-acA" secondAttribute="bottom" constant="40" id="Lhw-1w-ukX"/>
-                                    <constraint firstItem="LfA-Ui-XQV" firstAttribute="leading" secondItem="Gh6-pK-Iox" secondAttribute="leading" id="Pbq-g6-DSg"/>
-                                    <constraint firstItem="ef7-1J-acA" firstAttribute="top" secondItem="Gh6-pK-Iox" secondAttribute="top" id="QuX-TC-k2p"/>
-                                    <constraint firstAttribute="bottom" secondItem="LfA-Ui-XQV" secondAttribute="bottom" id="r7b-Wg-FDO"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ods-ud-Rjr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ods-ud-Rjr" firstAttribute="trailing" secondItem="Gh6-pK-Iox" secondAttribute="trailing" constant="20" id="Uy0-x5-167"/>
-                            <constraint firstItem="Gh6-pK-Iox" firstAttribute="leading" secondItem="ods-ud-Rjr" secondAttribute="leading" constant="20" id="Yn5-fl-UXd"/>
-                            <constraint firstItem="Gh6-pK-Iox" firstAttribute="centerY" secondItem="nWG-7V-28Y" secondAttribute="centerY" id="spL-Sr-hLJ"/>
+                            <constraint firstItem="wMi-RL-Dec" firstAttribute="centerY" secondItem="nWG-7V-28Y" secondAttribute="centerY" id="3pX-eF-tzU"/>
+                            <constraint firstItem="ods-ud-Rjr" firstAttribute="trailing" secondItem="wMi-RL-Dec" secondAttribute="trailing" constant="20" id="BOi-ew-W47"/>
+                            <constraint firstItem="wMi-RL-Dec" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ods-ud-Rjr" secondAttribute="top" constant="20" id="Fqk-HC-gwA"/>
+                            <constraint firstItem="ods-ud-Rjr" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wMi-RL-Dec" secondAttribute="bottom" constant="20" id="X4I-cw-e3S"/>
+                            <constraint firstItem="wMi-RL-Dec" firstAttribute="leading" secondItem="ods-ud-Rjr" secondAttribute="leading" constant="20" id="ZPl-Z0-q8b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadingHUD" destination="5Qy-Nm-TwS" id="y8c-ad-g1J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ko8-Vz-029" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

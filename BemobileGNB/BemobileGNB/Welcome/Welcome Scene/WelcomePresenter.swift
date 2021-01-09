@@ -13,8 +13,20 @@
 import UIKit
 
 protocol WelcomePresentationLogic {
+    func dataReceived()
+    func error()
+    
 }
 
 final class WelcomePresenter: WelcomePresentationLogic {
     weak var viewController: WelcomeDisplayLogic?
+    
+    func dataReceived() {
+        
+    }
+    
+    func error() {
+        let alert = AlertModel(title: "alert_title_error", description: "alert_description_genericError")
+        viewController?.displayAlert(alert)
+    }
 }

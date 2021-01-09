@@ -13,9 +13,13 @@
 import UIKit
 
 protocol WelcomeDisplayLogic: class {
+    func displayAlert(_ alert: AlertModel)
+    func requirementsCompleted()
 }
 
 final class WelcomeViewController: UIViewController {
+    @IBOutlet private weak var loadingHUD: UIActivityIndicatorView!
+    
     var interactor: WelcomeBusinessLogic?
     var router: (NSObjectProtocol & WelcomeRoutingLogic & WelcomeDataPassing)?
     
@@ -51,11 +55,24 @@ final class WelcomeViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("test")
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        requestData()
+    }
+    
+    func requestData() {
+        loadingHUD.startAnimating()
+        interactor?.requestData()
     }
 }
 
 extension WelcomeViewController: WelcomeDisplayLogic {
+    func displayAlert(_ alert: AlertModel) {
+        loadingHUD.stopAnimating()
+        AlertManager.displayAlert(alert, source: self)
+    }
+    
+    func requirementsCompleted() {
+        print("jobs done")
+    }
 }

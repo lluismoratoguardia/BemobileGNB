@@ -13,6 +13,7 @@
 import UIKit
 
 protocol WelcomeBusinessLogic {
+    func requestData()
 }
 
 protocol WelcomeDataStore {
@@ -20,4 +21,11 @@ protocol WelcomeDataStore {
 
 class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
     var presenter: WelcomePresentationLogic?
+    
+    func requestData() {
+        //ApiClient
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            self.presenter?.error()
+        }
+    }
 }
