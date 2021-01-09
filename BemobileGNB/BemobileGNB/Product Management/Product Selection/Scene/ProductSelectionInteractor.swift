@@ -13,6 +13,7 @@
 import UIKit
 
 protocol ProductSelectionBusinessLogic {
+    func getData()
 }
 
 protocol ProductSelectionDataStore {
@@ -24,4 +25,16 @@ class ProductSelectionInteractor: ProductSelectionBusinessLogic, ProductSelectio
     var rates = [RateModel]()
     var transactions = [TransactionModel]()
     var presenter: ProductSelectionPresentationLogic?
+    
+    func getData() {
+        var products = [String]()
+        
+        transactions.forEach { (transaction) in
+            if !products.contains(transaction.sku) {
+                products.append(transaction.sku)
+            }
+        }
+        
+        presenter?.filteredProducts(products)
+    }
 }

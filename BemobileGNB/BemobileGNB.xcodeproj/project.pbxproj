@@ -33,6 +33,10 @@
 		849ABC6A25A9FECE00C37592 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC6925A9FECE00C37592 /* RateModel.swift */; };
 		849ABC7425AA008100C37592 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC7325AA008100C37592 /* Constants.swift */; };
 		849ABC7F25AA0FB600C37592 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC7E25AA0FB600C37592 /* TransactionModel.swift */; };
+		849ABC9025AA173100C37592 /* ProductSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC8E25AA173100C37592 /* ProductSelectionTableViewCell.swift */; };
+		849ABC9125AA173100C37592 /* ProductSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849ABC8F25AA173100C37592 /* ProductSelectionTableViewCell.xib */; };
+		849ABC9925AA1E9600C37592 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC9825AA1E9600C37592 /* UITableViewCellExtension.swift */; };
+		849ABC9E25AA223300C37592 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABC9D25AA223300C37592 /* UITextFieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		849ABC6925A9FECE00C37592 /* RateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
 		849ABC7325AA008100C37592 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		849ABC7E25AA0FB600C37592 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		849ABC8E25AA173100C37592 /* ProductSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		849ABC8F25AA173100C37592 /* ProductSelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		849ABC9825AA1E9600C37592 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		849ABC9D25AA223300C37592 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +180,7 @@
 			path = BemobileGNBUITests;
 			sourceTree = "<group>";
 		};
-		849ABC0625A9E6D900C37592 /* Product Selection Scene */ = {
+		849ABC0625A9E6D900C37592 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				849ABC0725A9E70500C37592 /* ProductSelectionPresenter.swift */,
@@ -180,13 +188,13 @@
 				849ABC0925A9E70500C37592 /* ProductSelectionViewController.swift */,
 				849ABC0A25A9E70500C37592 /* ProductSelectionInteractor.swift */,
 			);
-			path = "Product Selection Scene";
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		849ABC1225A9E71300C37592 /* Product Management */ = {
 			isa = PBXGroup;
 			children = (
-				849ABC0625A9E6D900C37592 /* Product Selection Scene */,
+				849ABC8A25AA170300C37592 /* Product Selection */,
 				849ABC1325A9E73500C37592 /* ProductManagement.storyboard */,
 			);
 			path = "Product Management";
@@ -217,6 +225,8 @@
 			children = (
 				849ABC3F25A9E98200C37592 /* UILabelExtension.swift */,
 				849ABC4725A9EA4500C37592 /* StringExtension.swift */,
+				849ABC9825AA1E9600C37592 /* UITableViewCellExtension.swift */,
+				849ABC9D25AA223300C37592 /* UITextFieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -238,6 +248,24 @@
 				849ABC6425A9FBB000C37592 /* APIClient.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		849ABC8925AA16F300C37592 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				849ABC8E25AA173100C37592 /* ProductSelectionTableViewCell.swift */,
+				849ABC8F25AA173100C37592 /* ProductSelectionTableViewCell.xib */,
+			);
+			path = "Table View Cell";
+			sourceTree = "<group>";
+		};
+		849ABC8A25AA170300C37592 /* Product Selection */ = {
+			isa = PBXGroup;
+			children = (
+				849ABC8925AA16F300C37592 /* Table View Cell */,
+				849ABC0625A9E6D900C37592 /* Scene */,
+			);
+			path = "Product Selection";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +374,7 @@
 			files = (
 				849ABC1A25A9E7D500C37592 /* Welcome.storyboard in Resources */,
 				849ABC3225A9E8AF00C37592 /* Localizable.strings in Resources */,
+				849ABC9125AA173100C37592 /* ProductSelectionTableViewCell.xib in Resources */,
 				849ABBE025A9E5A400C37592 /* LaunchScreen.storyboard in Resources */,
 				849ABC1425A9E73500C37592 /* ProductManagement.storyboard in Resources */,
 				849ABBDD25A9E5A400C37592 /* Assets.xcassets in Resources */,
@@ -373,10 +402,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849ABC9025AA173100C37592 /* ProductSelectionTableViewCell.swift in Sources */,
 				849ABC2425A9E7F300C37592 /* WelcomeRouter.swift in Sources */,
 				849ABC7425AA008100C37592 /* Constants.swift in Sources */,
 				849ABC2525A9E7F300C37592 /* WelcomeViewController.swift in Sources */,
 				849ABC6025A9F3FE00C37592 /* AlertManager.swift in Sources */,
+				849ABC9E25AA223300C37592 /* UITextFieldExtension.swift in Sources */,
 				849ABC6525A9FBB000C37592 /* APIClient.swift in Sources */,
 				849ABC5925A9F31E00C37592 /* AlertModels.swift in Sources */,
 				849ABC2625A9E7F300C37592 /* WelcomeInteractor.swift in Sources */,
@@ -390,6 +421,7 @@
 				849ABBD425A9E5A200C37592 /* AppDelegate.swift in Sources */,
 				849ABC2325A9E7F300C37592 /* WelcomePresenter.swift in Sources */,
 				849ABC4825A9EA4500C37592 /* StringExtension.swift in Sources */,
+				849ABC9925AA1E9600C37592 /* UITableViewCellExtension.swift in Sources */,
 				849ABC0C25A9E70500C37592 /* ProductSelectionRouter.swift in Sources */,
 				849ABC6A25A9FECE00C37592 /* RateModel.swift in Sources */,
 			);

@@ -16,3 +16,6 @@
 "welcome_title" = "Welcome to Goliath National Bank";
 "welcome_subtitle" = "Please, wait while required data loads";
 "welcome_retry" = "Retry";
+
+// MARK: - Product Selection
+"productSelection_filter_placeholder" = "Write here to filter";
