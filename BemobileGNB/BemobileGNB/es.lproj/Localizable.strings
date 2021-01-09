@@ -6,5 +6,13 @@
   
 */
 
+// MARK: - Alert
+"alert_title_error" = "Error";
+"alert_description_network" = "La red no se encuentra disponible. Por favor, inténtelo de nuevo más tarde.";
+"alert_description_genericError" = "Ha ocurrido un error inesperado. Por favor, inténtelo de nuevo más tarde.";
+"alert_continue" = "Ok";
+
+// MARK: - Welcome
 "welcome_title" = "Bienvenido/a a Goliath National Bank";
 "welcome_subtitle" = "Por favor, espere mientras se cargan los datos requeridos";
+"welcome_retry" = "Reintentar";
