@@ -15,6 +15,7 @@
 		849ABBE025A9E5A400C37592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849ABBDE25A9E5A400C37592 /* LaunchScreen.storyboard */; };
 		849ABBEB25A9E5A400C37592 /* BemobileGNBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABBEA25A9E5A400C37592 /* BemobileGNBTests.swift */; };
 		849ABBF625A9E5A400C37592 /* BemobileGNBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849ABBF525A9E5A400C37592 /* BemobileGNBUITests.swift */; };
+		849ABC3225A9E8AF00C37592 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 849ABC3425A9E8AF00C37592 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		849ABBF125A9E5A400C37592 /* BemobileGNBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BemobileGNBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849ABBF525A9E5A400C37592 /* BemobileGNBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BemobileGNBUITests.swift; sourceTree = "<group>"; };
 		849ABBF725A9E5A400C37592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849ABC3325A9E8AF00C37592 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		849ABC3925A9E91B00C37592 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		849ABC3A25A9E91B00C37592 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				849ABBDC25A9E5A400C37592 /* Assets.xcassets */,
 				849ABBDE25A9E5A400C37592 /* LaunchScreen.storyboard */,
 				849ABBE125A9E5A400C37592 /* Info.plist */,
+				849ABC3425A9E8AF00C37592 /* Localizable.strings */,
 			);
 			path = BemobileGNB;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 849ABBC725A9E5A200C37592;
 			productRefGroup = 849ABBD125A9E5A200C37592 /* Products */;
@@ -231,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849ABC3225A9E8AF00C37592 /* Localizable.strings in Resources */,
 				849ABBE025A9E5A400C37592 /* LaunchScreen.storyboard in Resources */,
 				849ABBDD25A9E5A400C37592 /* Assets.xcassets in Resources */,
 				849ABBDB25A9E5A200C37592 /* Main.storyboard in Resources */,
@@ -296,20 +303,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		849ABBD925A9E5A200C37592 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				849ABBDA25A9E5A200C37592 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		849ABBDE25A9E5A400C37592 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				849ABBDF25A9E5A400C37592 /* Base */,
+				849ABC3925A9E91B00C37592 /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		849ABC3425A9E8AF00C37592 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849ABC3325A9E8AF00C37592 /* en */,
+				849ABC3A25A9E91B00C37592 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
