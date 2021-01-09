@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YEd-sa-2eh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="YVw-vS-DXQ">
+            <objects>
+                <viewController id="YEd-sa-2eh" customClass="WelcomeViewController" customModule="BemobileGNB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nWG-7V-28Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh6-pK-Iox">
+                                <rect key="frame" x="20" y="398.5" width="374" height="99"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef7-1J-acA">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedString" value="welcome_title"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfA-Ui-XQV">
+                                        <rect key="frame" x="0.0" y="75" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedString" value="welcome_subtitle"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LfA-Ui-XQV" secondAttribute="trailing" id="Boy-AK-d9W"/>
+                                    <constraint firstItem="ef7-1J-acA" firstAttribute="leading" secondItem="Gh6-pK-Iox" secondAttribute="leading" id="BuR-rk-4gL"/>
+                                    <constraint firstAttribute="trailing" secondItem="ef7-1J-acA" secondAttribute="trailing" id="DMj-o0-DFr"/>
+                                    <constraint firstItem="LfA-Ui-XQV" firstAttribute="top" secondItem="ef7-1J-acA" secondAttribute="bottom" constant="40" id="Lhw-1w-ukX"/>
+                                    <constraint firstItem="LfA-Ui-XQV" firstAttribute="leading" secondItem="Gh6-pK-Iox" secondAttribute="leading" id="Pbq-g6-DSg"/>
+                                    <constraint firstItem="ef7-1J-acA" firstAttribute="top" secondItem="Gh6-pK-Iox" secondAttribute="top" id="QuX-TC-k2p"/>
+                                    <constraint firstAttribute="bottom" secondItem="LfA-Ui-XQV" secondAttribute="bottom" id="r7b-Wg-FDO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ods-ud-Rjr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ods-ud-Rjr" firstAttribute="trailing" secondItem="Gh6-pK-Iox" secondAttribute="trailing" constant="20" id="Uy0-x5-167"/>
+                            <constraint firstItem="Gh6-pK-Iox" firstAttribute="leading" secondItem="ods-ud-Rjr" secondAttribute="leading" constant="20" id="Yn5-fl-UXd"/>
+                            <constraint firstItem="Gh6-pK-Iox" firstAttribute="centerY" secondItem="nWG-7V-28Y" secondAttribute="centerY" id="spL-Sr-hLJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ko8-Vz-029" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-433" y="41"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
