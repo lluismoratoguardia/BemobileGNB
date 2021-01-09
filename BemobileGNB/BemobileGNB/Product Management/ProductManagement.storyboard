@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ECW-0C-R3u">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -55,6 +56,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rAu-Vd-8fU"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="productSelection_title"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="filterTextField" destination="xdz-cM-W8v" id="G5N-JC-Xmd"/>
                         <outlet property="productsTableView" destination="Bck-cV-d3t" id="x3A-Bu-8ku"/>
@@ -63,6 +67,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KzF-5W-dxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="565" y="187"/>
+        </scene>
+        <!--Product Overview View Controller-->
+        <scene sceneID="512-Oa-xn1">
+            <objects>
+                <viewController storyboardIdentifier="ProductOverviewViewController" id="0XP-z6-EB2" customClass="ProductOverviewViewController" customModule="BemobileGNB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BD6-IJ-mur">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-da-GER">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="meA-Ju-woK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="0XP-z6-EB2" id="11H-4h-n97"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tpT-uU-g0T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bJp-da-GER" firstAttribute="leading" secondItem="tpT-uU-g0T" secondAttribute="leading" id="HiR-LR-JeD"/>
+                            <constraint firstItem="tpT-uU-g0T" firstAttribute="bottom" secondItem="bJp-da-GER" secondAttribute="bottom" id="HtO-0e-6pX"/>
+                            <constraint firstItem="bJp-da-GER" firstAttribute="top" secondItem="tpT-uU-g0T" secondAttribute="top" id="dEP-zm-i0L"/>
+                            <constraint firstItem="tpT-uU-g0T" firstAttribute="trailing" secondItem="bJp-da-GER" secondAttribute="trailing" id="q4O-k3-IL2"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="productOverview_title"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="transactionsTableView" destination="bJp-da-GER" id="XVe-jJ-suB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imR-yp-hj2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="187"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KDJ-lf-Ce9">

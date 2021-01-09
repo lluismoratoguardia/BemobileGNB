@@ -14,6 +14,7 @@ import UIKit
 
 protocol ProductSelectionPresentationLogic {
     func filteredProducts(_ products: [String])
+    func productSelected()
 }
 
 final class ProductSelectionPresenter: ProductSelectionPresentationLogic {
@@ -21,5 +22,9 @@ final class ProductSelectionPresenter: ProductSelectionPresentationLogic {
     
     func filteredProducts(_ products: [String]) {
         viewController?.displayProducts(products)
+    }
+    
+    func productSelected() {
+        viewController?.goToProduct()
     }
 }

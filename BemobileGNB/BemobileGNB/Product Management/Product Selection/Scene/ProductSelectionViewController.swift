@@ -14,6 +14,7 @@ import UIKit
 
 protocol ProductSelectionDisplayLogic: class {
     func displayProducts(_ products: [String])
+    func goToProduct()
 }
 
 final class ProductSelectionViewController: UIViewController {
@@ -124,7 +125,7 @@ extension ProductSelectionViewController: UITableViewDelegate {
             return
         }
         
-        print("selected: " + (productTableViewCell.model?.productName ?? ""))
+        interactor?.selectedProduct(productTableViewCell.model?.productName ?? "")
     }
 }
 
@@ -139,5 +140,9 @@ extension ProductSelectionViewController: UITextFieldDelegate {
 extension ProductSelectionViewController: ProductSelectionDisplayLogic {
     func displayProducts(_ products: [String]) {
         self.products = products
+    }
+    
+    func goToProduct() {
+        router?.navigateToProduct()
     }
 }

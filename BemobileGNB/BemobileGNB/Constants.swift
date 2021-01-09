@@ -14,5 +14,9 @@ struct Constants {
             static let currencyRates = "rates"
             static let transactions = "transactions"
         }
+        struct Headers {
+            static let jsonField = "Accept"
+            static let jsonValue = "application/json"
+        }
     }
 }

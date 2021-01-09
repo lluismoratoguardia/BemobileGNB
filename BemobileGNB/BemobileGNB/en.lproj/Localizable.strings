@@ -18,4 +18,9 @@
 "welcome_retry" = "Retry";
 
 // MARK: - Product Selection
+"productSelection_title" = "Product Selector";
 "productSelection_filter_placeholder" = "Write here to filter";
+
+// MARK: - Product Overview
+"productOverview_title" = "Product Overview";
+

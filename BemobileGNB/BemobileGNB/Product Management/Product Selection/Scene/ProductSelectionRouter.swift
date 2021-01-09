@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol ProductSelectionRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func navigateToProduct()
 }
 
 protocol ProductSelectionDataPassing {
@@ -24,31 +24,18 @@ class ProductSelectionRouter: NSObject, ProductSelectionRoutingLogic, ProductSel
     weak var viewController: ProductSelectionViewController?
     var dataStore: ProductSelectionDataStore?
     
-//    // MARK: Routing
-//    
-//    func routeToSomewhere(segue: UIStoryboardSegue?) {
-//        if let segue = segue {
-//            let destinationVC = segue.destination as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//        } else {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//            navigateToSomewhere(source: viewController!, destination: destinationVC)
-//        }
-//    }
-//    
-//    //     MARK: Navigation
-//    
-//    func navigateToSomewhere(source: ProductSelectionViewController, destination: SomewhereViewController) {
-//        source.show(destination, sender: nil)
-//    }
-//    
-//    //     MARK: Passing data
-//    
-//    func passDataToSomewhere(source: ProductSelectionDataStore, destination: inout SomewhereDataStore) {
-//        destination.name = source.name
-//    }
+    func navigateToProduct() {
+        guard let productOverviewViewController = UIStoryboard(name: "ProductManagement", bundle: nil).instantiateViewController(withIdentifier: "ProductOverviewViewController") as? ProductOverviewViewController else {
+            return
+        }
+        
+        var productOverviewViewControllerDS = productOverviewViewController.router!.dataStore!
+        passDataToProductOverview(source: dataStore!, destination: &productOverviewViewControllerDS)
+        viewController?.navigationController?.pushViewController(productOverviewViewController, animated: true)
+    }
+    
+    private func passDataToProductOverview(source: ProductSelectionDataStore, destination: inout ProductOverviewDataStore) {
+        destination.rates = source.rates
+        destination.transactions = source.selectedProductTransactions
+    }
 }

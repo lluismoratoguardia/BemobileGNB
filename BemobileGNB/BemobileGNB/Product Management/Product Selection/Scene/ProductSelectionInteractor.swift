@@ -14,16 +14,20 @@ import UIKit
 
 protocol ProductSelectionBusinessLogic {
     func getData()
+    func selectedProduct(_ productSKU: String)
 }
 
 protocol ProductSelectionDataStore {
     var rates: [RateModel] { get set }
     var transactions: [TransactionModel] { get set }
+    var selectedProductTransactions: [TransactionModel] { get set }
 }
 
 class ProductSelectionInteractor: ProductSelectionBusinessLogic, ProductSelectionDataStore {
     var rates = [RateModel]()
     var transactions = [TransactionModel]()
+    var selectedProductTransactions = [TransactionModel]()
+    
     var presenter: ProductSelectionPresentationLogic?
     
     func getData() {
@@ -36,5 +40,10 @@ class ProductSelectionInteractor: ProductSelectionBusinessLogic, ProductSelectio
         }
         
         presenter?.filteredProducts(products)
+    }
+    
+    func selectedProduct(_ productSKU: String) {
+        selectedProductTransactions = transactions.filter({$0.sku == productSKU})
+        presenter?.productSelected()
     }
 }

@@ -8,13 +8,13 @@
 import UIKit
 
 extension UITextField {
-    @IBInspectable var localizedPlaceholder: String {
+    @IBInspectable var localizedPlaceholder: String? {
         get {
-            return self.placeholder ?? ""
+            return placeholder
         }
         
         set {
-            placeholder = newValue.localized
+            placeholder = newValue?.localized
         }
     }
     
