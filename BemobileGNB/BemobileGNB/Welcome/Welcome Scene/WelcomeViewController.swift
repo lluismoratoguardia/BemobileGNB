@@ -19,6 +19,7 @@ protocol WelcomeDisplayLogic: class {
 
 final class WelcomeViewController: UIViewController {
     @IBOutlet private weak var loadingHUD: UIActivityIndicatorView!
+    @IBOutlet private weak var retryButton: UIButton!
     
     var interactor: WelcomeBusinessLogic?
     var router: (NSObjectProtocol & WelcomeRoutingLogic & WelcomeDataPassing)?
@@ -55,8 +56,22 @@ final class WelcomeViewController: UIViewController {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupButton()
+    }
+    
+    private func setupButton() {
+        retryButton.setTitle("welcome_retry".localized, for: .normal)
+        retryButton.layer.cornerRadius = 4
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        requestData()
+    }
+    
+    @IBAction private func retryTouchUp() {
         requestData()
     }
     
@@ -69,10 +84,12 @@ final class WelcomeViewController: UIViewController {
 extension WelcomeViewController: WelcomeDisplayLogic {
     func displayAlert(_ alert: AlertModel) {
         loadingHUD.stopAnimating()
+        retryButton.isHidden = false
         AlertManager.displayAlert(alert, source: self)
     }
     
     func requirementsCompleted() {
+        loadingHUD.stopAnimating()
         print("jobs done")
     }
 }

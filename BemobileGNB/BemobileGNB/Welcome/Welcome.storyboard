@@ -42,19 +42,36 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtS-LL-GEr">
+                                <rect key="frame" x="20" y="808" width="374" height="44"/>
+                                <color key="backgroundColor" red="0.2784313725" green="0.61933318660000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="yVG-Za-AFJ"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="retryTouchUp" destination="YEd-sa-2eh" eventType="touchUpInside" id="ZXg-st-BPn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ods-ud-Rjr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wMi-RL-Dec" firstAttribute="centerY" secondItem="nWG-7V-28Y" secondAttribute="centerY" id="3pX-eF-tzU"/>
+                            <constraint firstItem="ods-ud-Rjr" firstAttribute="bottom" secondItem="CtS-LL-GEr" secondAttribute="bottom" constant="10" id="9yg-xf-24t"/>
                             <constraint firstItem="ods-ud-Rjr" firstAttribute="trailing" secondItem="wMi-RL-Dec" secondAttribute="trailing" constant="20" id="BOi-ew-W47"/>
                             <constraint firstItem="wMi-RL-Dec" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ods-ud-Rjr" secondAttribute="top" constant="20" id="Fqk-HC-gwA"/>
-                            <constraint firstItem="ods-ud-Rjr" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wMi-RL-Dec" secondAttribute="bottom" constant="20" id="X4I-cw-e3S"/>
+                            <constraint firstItem="CtS-LL-GEr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wMi-RL-Dec" secondAttribute="bottom" constant="20" id="X4I-cw-e3S"/>
                             <constraint firstItem="wMi-RL-Dec" firstAttribute="leading" secondItem="ods-ud-Rjr" secondAttribute="leading" constant="20" id="ZPl-Z0-q8b"/>
+                            <constraint firstItem="CtS-LL-GEr" firstAttribute="leading" secondItem="ods-ud-Rjr" secondAttribute="leading" constant="20" id="ZcP-xT-RmA"/>
+                            <constraint firstItem="ods-ud-Rjr" firstAttribute="trailing" secondItem="CtS-LL-GEr" secondAttribute="trailing" constant="20" id="fdD-lK-hOK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loadingHUD" destination="5Qy-Nm-TwS" id="y8c-ad-g1J"/>
+                        <outlet property="retryButton" destination="CtS-LL-GEr" id="FR0-as-qNk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ko8-Vz-029" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

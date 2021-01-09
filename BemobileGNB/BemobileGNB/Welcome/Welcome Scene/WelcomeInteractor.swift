@@ -21,11 +21,25 @@ protocol WelcomeDataStore {
 
 class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
     var presenter: WelcomePresentationLogic?
+    var rates = [RateModel]()
     
     func requestData() {
-        //ApiClient
-        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
-            self.presenter?.error()
+        if rates.isEmpty {
+            requestRates()
+        } else {
+            presenter?.dataReceived()
+        }
+    }
+    
+    private func requestRates() {
+        APIClient.requestCurrencyRates { (response) in
+            switch response {
+            case .success(let rates):
+                self.rates = rates
+                self.requestData()
+            case .error(let error):
+                self.presenter?.error(error)
+            }
         }
     }
 }

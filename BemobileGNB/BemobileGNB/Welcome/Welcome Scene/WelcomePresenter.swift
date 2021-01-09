@@ -14,19 +14,30 @@ import UIKit
 
 protocol WelcomePresentationLogic {
     func dataReceived()
-    func error()
-    
+    func error(_ type: ErrorType)
 }
 
 final class WelcomePresenter: WelcomePresentationLogic {
     weak var viewController: WelcomeDisplayLogic?
     
     func dataReceived() {
-        
+        DispatchQueue.main.async {
+            self.viewController?.requirementsCompleted()
+        }
     }
     
-    func error() {
-        let alert = AlertModel(title: "alert_title_error", description: "alert_description_genericError")
-        viewController?.displayAlert(alert)
+    func error(_ type: ErrorType) {
+        switch type {
+        case .network:
+            let alert = AlertModel(title: "alert_title_error", description: "alert_description_network")
+            DispatchQueue.main.async {
+                self.viewController?.displayAlert(alert)
+            }
+        case .undefined:
+            let alert = AlertModel(title: "alert_title_error", description: "alert_description_genericError")
+            DispatchQueue.main.async {
+                self.viewController?.displayAlert(alert)
+            }
+        }
     }
 }
