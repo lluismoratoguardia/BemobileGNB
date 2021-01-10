@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  BemobileGNB
+
+  Created by Admin on 09/01/2021.
+  
+*/
+
+// MARK: - Alert
+"alert_title_error" = "Error";
+"alert_description_network" = "No network available. Please, try again later.";
+"alert_description_genericError" = "An unexpected error occurred. Please, try again later.";
+"alert_continue" = "Ok";
+
+// MARK: - Welcome
+"welcome_title" = "Welcome to Goliath National Bank";
+"welcome_subtitle" = "Please, wait while required data loads";
+"welcome_retry" = "Retry";
+
+// MARK: - Product Selection
+"productSelection_title" = "Product Selector";
+"productSelection_filter_placeholder" = "Write here to filter";
+
+// MARK: - Product Overview
+"productOverview_title" = "Product Overview";
+"productOverview_total_placeholder" = "Total: Calculating...";
+"productOverview_total" = "Total: %.2f";
+"productOverview_currency_changeButton" = "Change";
+
