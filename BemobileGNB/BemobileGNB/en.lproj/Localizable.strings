@@ -23,4 +23,7 @@
 
 // MARK: - Product Overview
 "productOverview_title" = "Product Overview";
+"productOverview_total_placeholder" = "Total: Calculating...";
+"productOverview_total" = "Total: %.2f";
+"productOverview_currency_changeButton" = "Change";
 

@@ -14,6 +14,7 @@ import UIKit
 
 protocol ProductOverviewBusinessLogic {
     func getData()
+    func calculateTotalValue(forCurrency currency: String)
 }
 
 protocol ProductOverviewDataStore {
@@ -38,19 +39,31 @@ class ProductOverviewInteractor: ProductOverviewBusinessLogic, ProductOverviewDa
         let productId = transactions.first?.sku ?? ""
         presenter?.presentProductId(productId)
         presenter?.presentTransactions(transactions)
-        manageTotalTransaction()
+        manageCurrencies()
     }
     
-    func manageTotalTransaction() {
+    func calculateTotalValue(forCurrency currency: String) {
         convertedTransactionsValue = [Int: Double]()
         
         transactions.enumerated().forEach { (position, transaction) in
-            RateUtils().convertTo("EUR", amount: transaction.amount, currency: transaction.currency, rates: rates, completion: { (rate) in
+            RateUtils().convertTo(currency, amount: transaction.amount, currency: transaction.currency, rates: rates, completion: { (rate) in
                 let value = (Double(transaction.amount) ?? 0) * rate
                 if value != 0 {
                     self.convertedTransactionsValue[position] = value
                 }
             })
         }
+    }
+    
+    private func manageCurrencies() {
+        var currencies = [String]()
+        
+        rates.forEach { (rate) in
+            if !currencies.contains(rate.to) {
+                currencies.append(rate.to)
+            }
+        }
+        
+        presenter?.presentCurrencies(currencies)
     }
 }

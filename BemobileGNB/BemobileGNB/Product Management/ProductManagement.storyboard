@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-da-GER">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="meA-Ju-woK">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -88,13 +88,59 @@
                                     <outlet property="dataSource" destination="0XP-z6-EB2" id="11H-4h-n97"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18W-06-wf4">
+                                <rect key="frame" x="294.5" y="807" width="99.5" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHW-qQ-VaU">
+                                        <rect key="frame" x="0.0" y="12" width="41.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedString" value="productOverview_total_placeholder"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yce-lF-6vo">
+                                        <rect key="frame" x="53.5" y="6" width="46" height="33"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="changeCurrencyTouchUp" destination="0XP-z6-EB2" eventType="touchUpInside" id="g0l-vq-5xA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Yce-lF-6vo" firstAttribute="leading" secondItem="aHW-qQ-VaU" secondAttribute="trailing" constant="12" id="Rqd-3l-ZUh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yce-lF-6vo" secondAttribute="bottom" constant="6" id="XZg-Y9-jag"/>
+                                    <constraint firstAttribute="bottom" secondItem="aHW-qQ-VaU" secondAttribute="bottom" constant="12" id="aAY-8i-dvU"/>
+                                    <constraint firstItem="Yce-lF-6vo" firstAttribute="top" secondItem="18W-06-wf4" secondAttribute="top" constant="6" id="evW-QD-ErL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yce-lF-6vo" secondAttribute="trailing" id="iL6-mf-XjB"/>
+                                    <constraint firstItem="aHW-qQ-VaU" firstAttribute="top" secondItem="18W-06-wf4" secondAttribute="top" constant="12" id="kaA-Q0-fML"/>
+                                    <constraint firstItem="aHW-qQ-VaU" firstAttribute="leading" secondItem="18W-06-wf4" secondAttribute="leading" id="z65-hr-4uR"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Py4-rp-S0A">
+                                <rect key="frame" x="0.0" y="896" width="414" height="216"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0XP-z6-EB2" id="P7N-NI-CEQ"/>
+                                    <outlet property="delegate" destination="0XP-z6-EB2" id="3g8-t7-v7f"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tpT-uU-g0T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Py4-rp-S0A" secondAttribute="bottom" priority="500" id="5tG-IC-OcR"/>
+                            <constraint firstItem="Py4-rp-S0A" firstAttribute="top" secondItem="BD6-IJ-mur" secondAttribute="bottom" id="GFE-qr-q9K"/>
                             <constraint firstItem="bJp-da-GER" firstAttribute="leading" secondItem="tpT-uU-g0T" secondAttribute="leading" id="HiR-LR-JeD"/>
-                            <constraint firstItem="tpT-uU-g0T" firstAttribute="bottom" secondItem="bJp-da-GER" secondAttribute="bottom" id="HtO-0e-6pX"/>
+                            <constraint firstItem="tpT-uU-g0T" firstAttribute="trailing" secondItem="18W-06-wf4" secondAttribute="trailing" constant="20" id="JfU-QL-ZHv"/>
+                            <constraint firstItem="tpT-uU-g0T" firstAttribute="bottom" secondItem="18W-06-wf4" secondAttribute="bottom" constant="10" id="Uhf-sq-LUL"/>
+                            <constraint firstItem="18W-06-wf4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tpT-uU-g0T" secondAttribute="leading" constant="20" id="XQM-N4-rI9"/>
+                            <constraint firstItem="Py4-rp-S0A" firstAttribute="trailing" secondItem="tpT-uU-g0T" secondAttribute="trailing" id="d3n-8X-bZE"/>
                             <constraint firstItem="bJp-da-GER" firstAttribute="top" secondItem="tpT-uU-g0T" secondAttribute="top" id="dEP-zm-i0L"/>
+                            <constraint firstItem="18W-06-wf4" firstAttribute="top" secondItem="bJp-da-GER" secondAttribute="bottom" id="hPN-Ry-AMz"/>
+                            <constraint firstItem="Py4-rp-S0A" firstAttribute="leading" secondItem="tpT-uU-g0T" secondAttribute="leading" id="mDs-MR-B2v"/>
                             <constraint firstItem="tpT-uU-g0T" firstAttribute="trailing" secondItem="bJp-da-GER" secondAttribute="trailing" id="q4O-k3-IL2"/>
                         </constraints>
                     </view>
@@ -102,12 +148,16 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="productOverview_title"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="changeCurrencyButton" destination="Yce-lF-6vo" id="02i-Mm-0YT"/>
+                        <outlet property="currenciesPickerView" destination="Py4-rp-S0A" id="cgv-of-bSk"/>
+                        <outlet property="currenciesPickerViewHidingConstraint" destination="GFE-qr-q9K" id="tHk-bs-lLY"/>
+                        <outlet property="totalValueLabel" destination="aHW-qQ-VaU" id="EmP-SP-DUp"/>
                         <outlet property="transactionsTableView" destination="bJp-da-GER" id="XVe-jJ-suB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imR-yp-hj2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472" y="187"/>
+            <point key="canvasLocation" x="1471.0144927536232" y="186.83035714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KDJ-lf-Ce9">
@@ -128,6 +178,9 @@
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

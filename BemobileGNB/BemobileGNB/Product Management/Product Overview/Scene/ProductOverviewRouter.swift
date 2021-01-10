@@ -13,7 +13,6 @@
 import UIKit
 
 @objc protocol ProductOverviewRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
 protocol ProductOverviewDataPassing {
@@ -23,32 +22,4 @@ protocol ProductOverviewDataPassing {
 class ProductOverviewRouter: NSObject, ProductOverviewRoutingLogic, ProductOverviewDataPassing {
     weak var viewController: ProductOverviewViewController?
     var dataStore: ProductOverviewDataStore?
-    
-//    // MARK: Routing
-//    
-//    func routeToSomewhere(segue: UIStoryboardSegue?) {
-//        if let segue = segue {
-//            let destinationVC = segue.destination as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//        } else {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//            navigateToSomewhere(source: viewController!, destination: destinationVC)
-//        }
-//    }
-//    
-//    //     MARK: Navigation
-//    
-//    func navigateToSomewhere(source: ProductOverviewViewController, destination: SomewhereViewController) {
-//        source.show(destination, sender: nil)
-//    }
-//    
-//    //     MARK: Passing data
-//    
-//    func passDataToSomewhere(source: ProductOverviewDataStore, destination: inout SomewhereDataStore) {
-//        destination.name = source.name
-//    }
 }

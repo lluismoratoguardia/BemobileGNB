@@ -16,6 +16,7 @@ protocol ProductOverviewPresentationLogic {
     func presentProductId(_ id: String)
     func presentTransactions(_ transactions: [TransactionModel])
     func presentTotal(_ values: [Double])
+    func presentCurrencies(_ currencies: [String])
 }
 
 final class ProductOverviewPresenter: ProductOverviewPresentationLogic {
@@ -33,5 +34,9 @@ final class ProductOverviewPresenter: ProductOverviewPresentationLogic {
         var totalValue: Double = 0
         values.forEach({ totalValue += $0 })
         viewController?.displayTotalValue(totalValue)
+    }
+    
+    func presentCurrencies(_ currencies: [String]) {
+        viewController?.displayCurrencies(currencies)
     }
 }

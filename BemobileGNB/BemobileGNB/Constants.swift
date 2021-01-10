@@ -8,6 +8,9 @@
 import Foundation
 
 struct Constants {
+    struct ProductOverview {
+        static let defaultCurrency = "EUR"
+    }
     struct API {
         static let baseURL = "https://quiet-stone-2094.herokuapp.com/"
         struct Endpoints {

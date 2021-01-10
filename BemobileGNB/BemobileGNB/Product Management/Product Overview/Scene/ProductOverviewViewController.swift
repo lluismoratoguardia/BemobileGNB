@@ -16,14 +16,36 @@ protocol ProductOverviewDisplayLogic: class {
     func displayProductId(_ id: String)
     func displayTransactions(_ transactions: [TransactionModel])
     func displayTotalValue(_ value: Double)
+    func displayCurrencies(_ currencies: [String])
 }
 
 final class ProductOverviewViewController: UIViewController {
     @IBOutlet private weak var transactionsTableView: UITableView!
+    @IBOutlet private weak var totalValueLabel: UILabel!
+    @IBOutlet private weak var currenciesPickerView: UIPickerView!
+    @IBOutlet private var currenciesPickerViewHidingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var changeCurrencyButton: UIButton!
     
     private var transactions = [TransactionModel]() {
         didSet {
+            view.layoutIfNeeded()
             transactionsTableView.reloadData()
+        }
+    }
+    private var currencies = [String]() {
+        didSet {
+            currenciesPickerView.reloadAllComponents()
+            if let row = currencies.firstIndex(of: currentCurrency) {
+                currenciesPickerView.selectRow(row, inComponent: 0, animated: false)
+                pickerView(currenciesPickerView, didSelectRow: row, inComponent: 0)
+            }
+        }
+    }
+    private var currentCurrency = Constants.ProductOverview.defaultCurrency {
+        didSet {
+            changeCurrencyButton.setTitle(currentCurrency, for: .normal)
+            totalValueLabel.text = "productOverview_total_placeholder".localized
+            interactor?.calculateTotalValue(forCurrency: currentCurrency)
         }
     }
     
@@ -63,8 +85,17 @@ final class ProductOverviewViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        interactor?.getData()
         transactionsTableView.register(TransactionTableViewCell.nib(), forCellReuseIdentifier: TransactionTableViewCell.nibName())
+        changeCurrencyButton.setTitle("productOverview_currency_changeButton".localized, for: .normal)
+        currenciesPickerView.reloadAllComponents()
+        interactor?.getData()
+    }
+    
+    @IBAction func changeCurrencyTouchUp() {
+        UIView.animate(withDuration: 0.3) {
+            self.currenciesPickerViewHidingConstraint.isActive = false
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
@@ -88,6 +119,30 @@ extension ProductOverviewViewController: UITableViewDataSource {
     }
 }
 
+extension ProductOverviewViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return currencies.count
+    }
+}
+
+extension ProductOverviewViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return currencies[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentCurrency = currencies[row]
+        UIView.animate(withDuration: 0.3) {
+            self.currenciesPickerViewHidingConstraint.isActive = true
+            self.view.layoutIfNeeded()
+        }
+    }
+}
+
 extension ProductOverviewViewController: ProductOverviewDisplayLogic {
     func displayProductId(_ id: String) {
         title = "productOverview_title".localized + ": " + id
@@ -98,6 +153,10 @@ extension ProductOverviewViewController: ProductOverviewDisplayLogic {
     }
     
     func displayTotalValue(_ value: Double) {
-        print("Total value: %@", value)
+        totalValueLabel.text = String(format: "productOverview_total".localized, value)
+    }
+    
+    func displayCurrencies(_ currencies: [String]) {
+        self.currencies = currencies
     }
 }
