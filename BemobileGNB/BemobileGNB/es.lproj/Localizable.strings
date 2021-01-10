@@ -16,3 +16,13 @@
 "welcome_title" = "Bienvenido/a a Goliath National Bank";
 "welcome_subtitle" = "Por favor, espere mientras se cargan los datos requeridos";
 "welcome_retry" = "Reintentar";
+
+// MARK: - Product Selection
+"productSelection_title" = "Selector de Producto";
+"productSelection_filter_placeholder" = "Escribe aquí para filtrar";
+
+// MARK: - Product Overview
+"productOverview_title" = "Detalle del Producto";
+"productOverview_total_placeholder" = "Total: Calculando...";
+"productOverview_total" = "Total: %.2f";
+"productOverview_currency_changeButton" = "Cambiar";

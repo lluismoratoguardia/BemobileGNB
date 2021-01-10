@@ -19,12 +19,16 @@ enum RequestResult<T: Codable> {
 
 final class APIClient {
     class func requestCurrencyRates(completion: @escaping(RequestResult<[RateModel]>) -> Void) {
-        let urlRequest = URLRequest(url: URL(string: Constants.API.baseURL + Constants.API.Endpoints.currencyRates)!)
+        var urlRequest = URLRequest(url: URL(string: Constants.API.baseURL + Constants.API.Endpoints.currencyRates)!)
+        urlRequest.addValue(Constants.API.Headers.jsonValue, forHTTPHeaderField: Constants.API.Headers.jsonField)
+        
         performRequest(urlRequest, completion: completion)
     }
     
     class func requestTransactions(completion: @escaping(RequestResult<[TransactionModel]>) -> Void) {
-        let urlRequest = URLRequest(url:URL(string: Constants.API.baseURL + Constants.API.Endpoints.transactions)!)
+        var urlRequest = URLRequest(url:URL(string: Constants.API.baseURL + Constants.API.Endpoints.transactions)!)
+        urlRequest.addValue(Constants.API.Headers.jsonValue, forHTTPHeaderField: Constants.API.Headers.jsonField)
+        
         performRequest(urlRequest, completion: completion)
     }
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class RateModel: Codable {
+struct RateModel: Codable {
     var from: String
     var to: String
     var rate: String

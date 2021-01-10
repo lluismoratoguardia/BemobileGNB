@@ -13,8 +13,18 @@
 import UIKit
 
 protocol ProductSelectionPresentationLogic {
+    func filteredProducts(_ products: [String])
+    func productSelected()
 }
 
 final class ProductSelectionPresenter: ProductSelectionPresentationLogic {
     weak var viewController: ProductSelectionDisplayLogic?
+    
+    func filteredProducts(_ products: [String]) {
+        viewController?.displayProducts(products)
+    }
+    
+    func productSelected() {
+        viewController?.goToProduct()
+    }
 }

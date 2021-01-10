@@ -31,7 +31,7 @@ class WelcomeRouter: NSObject, WelcomeRoutingLogic, WelcomeDataPassing {
         
         var productSelectionViewControllerDS = productSelectionViewController.router!.dataStore!
         passDataToProductSelection(source: dataStore!, destination: &productSelectionViewControllerDS)
-        UIApplication.shared.windows.first?.rootViewController = productSelectionViewController
+        UIApplication.shared.windows.first?.rootViewController = navigationController
     }
     
     private func passDataToProductSelection(source: WelcomeDataStore, destination: inout ProductSelectionDataStore) {

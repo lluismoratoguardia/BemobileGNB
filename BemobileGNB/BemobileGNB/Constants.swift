@@ -8,11 +8,18 @@
 import Foundation
 
 struct Constants {
+    struct ProductOverview {
+        static let defaultCurrency = "EUR"
+    }
     struct API {
         static let baseURL = "https://quiet-stone-2094.herokuapp.com/"
         struct Endpoints {
             static let currencyRates = "rates"
             static let transactions = "transactions"
+        }
+        struct Headers {
+            static let jsonField = "Accept"
+            static let jsonValue = "application/json"
         }
     }
 }
