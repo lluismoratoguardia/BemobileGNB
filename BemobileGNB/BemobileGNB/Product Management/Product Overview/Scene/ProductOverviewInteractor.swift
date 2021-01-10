@@ -46,7 +46,7 @@ class ProductOverviewInteractor: ProductOverviewBusinessLogic, ProductOverviewDa
         convertedTransactionsValue = [Int: Double]()
         
         transactions.enumerated().forEach { (position, transaction) in
-            RateUtils().convertTo(currency, amount: transaction.amount, currency: transaction.currency, rates: rates, completion: { (rate) in
+            RateUtils().calculateConversionRate(forCurrency: currency, toCurrency: transaction.currency, rates: rates, completion: { (rate) in
                 let value = (Double(transaction.amount) ?? 0) * rate
                 if value != 0 {
                     self.convertedTransactionsValue[position] = value

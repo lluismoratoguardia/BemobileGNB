@@ -8,11 +8,7 @@
 import Foundation
 
 struct RateUtils {
-    func convertTo(_ newCurrency: String, amount: String, currency: String, rates: [RateModel], completion: @escaping(Double) -> Void) {
-        guard let amountNumber = Double(amount) else {
-            return
-        }
-        
+    func calculateConversionRate(forCurrency newCurrency: String, toCurrency currency: String, rates: [RateModel], completion: @escaping(Double) -> Void) {
         if newCurrency == currency {
             completion(1)
         } else {
